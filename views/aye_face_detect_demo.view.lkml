@@ -4,7 +4,8 @@ view: aye_face_detect_demo {
 
   dimension: age_group {
     type: string
-    sql: ${TABLE}.Age_group ;;
+    sql: case when ${TABLE}.Age_group  = "5-18" then "13-18"
+    else ${TABLE}.Age_group  end ;;
   }
   dimension: average_order_time {
     type: number
@@ -145,6 +146,10 @@ view: aye_face_detect_demo {
   measure: average_order_value2 {
     type: sum
     sql:  ${TABLE}.average_order_value ;;
+  }
+  dimension: purchase_date {
+    type: date
+    sql: date_sub(current_date(), interval ${recency_of_purchase} day) ;;
   }
   dimension: gender2 {
     type: string

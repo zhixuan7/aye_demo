@@ -1,4 +1,4 @@
-view: aye_face_detect_demo {
+view: store_A {
 
   sql_table_name: `cmmy-rd-playground.aye_dataset.aye_face_detect_demo` ;;
 

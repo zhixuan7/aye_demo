@@ -8,8 +8,8 @@ datagroup: aye_demo_default_datagroup {
   max_cache_age: "1 hour"
 }
 
-explore: aye_face_detect_demo {
-  from: aye_face_detect_demo
+explore: store_A {
+  from: store_A
 }
 
 persist_with: aye_demo_default_datagroup
